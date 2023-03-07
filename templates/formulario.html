@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo.css') }}">
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <form method="POST" action="{{ url_for('formulario') }}">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" required><br>
+      <label for="apellido">Apellido:</label>
+      <input type="text" name="apellido" id="apellido" required><br>
+      <label for="dpi">DPI:</label>
+      <input type="text" name="dpi" id="dpi" required pattern="^\d{4}$"><br>
+      <label for="edad">Edad:</label>
+      <input type="number" name="edad" id="edad" required min="18" max="99"><br>
+      <label for="correo">Correo:</label>
+      <input type="email" name="correo" id="correo" required><br>
+      <button>Enviar</button>
+    </form>
+  </body>
+</html>
