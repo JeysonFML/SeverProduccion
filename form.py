@@ -6,7 +6,7 @@ app.config['SECRET_KEY'] = 'clave_secreta'
 
 db = mysql.connector.connect(
     host="172.19.0.2",
-    user="root",
+    user="bd",
     password="jeyson13",
     database="db_production"
 )
